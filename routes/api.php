@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BookedTimesController;
+use App\Http\Controllers\OpeningHoursController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/opening-hours', OpeningHoursController::class);
+Route::get('/booked-times', [BookedTimesController::class, 'index']);
+Route::post('/booked-times', [BookedTimesController::class, 'save']);
