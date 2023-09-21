@@ -1,0 +1,27 @@
+/* The message box */
+#box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+#box.show {
+    display: block;
+}
+
+#box.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+#box.success {
+    padding: 20px;
+    background-color: #3cf436; /* Green */
+    color: white;
+    margin-bottom: 15px;
+}
